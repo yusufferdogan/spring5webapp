@@ -3,21 +3,21 @@ package guru.springframework.spring5webapp.bootstrap;
 import guru.springframework.spring5webapp.domain.Author;
 import guru.springframework.spring5webapp.domain.Book;
 import guru.springframework.spring5webapp.domain.Publisher;
-import guru.springframework.spring5webapp.repositories.AuthorRepositories;
-import guru.springframework.spring5webapp.repositories.BookRepositories;
-import guru.springframework.spring5webapp.repositories.PublisherRepositories;
+import guru.springframework.spring5webapp.repositories.AuthorRepository;
+import guru.springframework.spring5webapp.repositories.BookRepository;
+import guru.springframework.spring5webapp.repositories.PublisherRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 @Component
 public class BootStrapData implements CommandLineRunner {
 
-    private final AuthorRepositories authorRepository;
-    private final BookRepositories bookRepository;
-    private final PublisherRepositories publisherRepository;
+    private final AuthorRepository authorRepository;
+    private final BookRepository bookRepository;
+    private final PublisherRepository publisherRepository;
 
 
-    public BootStrapData(AuthorRepositories authorRepository, BookRepositories bookRepository, PublisherRepositories publisherRepository) {
+    public BootStrapData(AuthorRepository authorRepository, BookRepository bookRepository, PublisherRepository publisherRepository) {
         this.authorRepository = authorRepository;
         this.bookRepository = bookRepository;
         this.publisherRepository = publisherRepository;
